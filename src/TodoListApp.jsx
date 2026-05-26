@@ -46,7 +46,8 @@ function TodoListApp() {
   }
   function toggleTodo(id) {
     setTodos((todos) =>
-      // todos에서 하나씩 꺼내서, todo, 꺼낸 todo의 id와 id 가 같다면,
+      // todos에서 
+      // 하나씩 꺼내서, todo, 꺼낸 todo의 id와 id 가 같다면,
       // 새 객체 만들어서 todo 값 복사, 속성 수정
       todos.map((todo) =>
         todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
@@ -67,10 +68,16 @@ function TodoListApp() {
       )
     )
   }
+  function oldsort(){
+    setTodos((todos) =>
+      [...todos].sort((a, b) => a.id - b.id)
+  );
+  }
   return (
     <div className="todo">
       <TodoHeader />
       <TodoAdder addTodo={addTodo} />
+      <button onClick={oldsort} className='oldbtn'>오래된순</button>
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} editTodo={editTodo}/>
     </div>
   )
