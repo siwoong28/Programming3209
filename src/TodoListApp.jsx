@@ -73,11 +73,17 @@ function TodoListApp() {
       [...todos].sort((a, b) => a.id - b.id)
   );
   }
+  function newsort(){
+    setTodos((todos) =>
+      [...todos].sort((a, b) => b.id - a.id)
+  );
+  }
   return (
     <div className="todo">
       <TodoHeader />
       <TodoAdder addTodo={addTodo} />
       <button onClick={oldsort} className='oldbtn'>오래된순</button>
+      <button onClick={newsort} className='oldbtn'>최신순</button>
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} editTodo={editTodo}/>
     </div>
   )
