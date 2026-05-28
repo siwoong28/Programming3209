@@ -41,4 +41,4 @@ npm create vite@latest .
 - `useNavigate()`
 - 3202 김효일 1-1	날짜 표시?	★	Date, 컴포넌트 렌더링
 -	3210 이상희 날짜 표시, Date, 컴포넌트 렌더링
-
+- 3209 윤시웅 3-3	전체 삭제	★	배열 초기화, confirm modal
